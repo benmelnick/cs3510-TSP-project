@@ -125,6 +125,8 @@ class SimulatedAnneal:
 
             # calculate the new temperature
             self.temp = self.calculate_temperature(time_elapsed)
+        # start node and end node are the same node
+        self.best_path.append(self.best_path[0])
 
         return self.best_path, self.best_cost
 
