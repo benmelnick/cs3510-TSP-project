@@ -6,7 +6,7 @@ a.
 	
 
    Email:
-	ben.melnick@gatech.edu
+	bmelnick3@gatech.edu
 	xchen671@gatech.edu
 
    Date of submission:
