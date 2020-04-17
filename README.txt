@@ -10,17 +10,16 @@ a.
 	xchen671@gatech.edu
 
    Date of submission:
-	April 16 2020
+	April 17 2020
 
 b. 
-  annealing.py: Simulated annealing algorithm program, get the best path and 		  the best cost.
-  tsp-3510.py: a function that running the annealing.py file where the inputs 		 come, display the best path and the best cost on the command 			 console and write the best path, best cost into the 
-		 mat-output.txt file.
+  annealing.py: Simulated annealing algorithm program, get the best path and the best cost given an input file and a maximum time.
+  tsp-3510.py: entry point of the program that parses the input file and other command line arguments, calls annealing.py, which takes in the input file and max time and returns the best path and the best cost on the command console. The solution is printed to both the command line and the output file specified in the command line.
   mat-output.txt: include the best path and the best cost
-  mat-test.txt: includes the node-ID (a distinct positive integer) and the x-y  		  coordinates for every node (one row per node).
-  README.txt: mentioned the information of the author and how to compile this 		program in the command line.
+  mat-test.txt: includes the node-ID (a distinct positive integer) and the x-y coordinates for every node (one row per node).
+  README.txt: mentioned the information of the author and how to compile this program in the command line.
 
-c. The command-line: python3 tsp-3510.py mat-test.txt mat-output.txt 3
+c. The command-line: python3 tsp-3510.py <input .txt file> <output .txt> <seconds to run program>
    (the maximum time is 3 minutes).
 
 d.
@@ -28,7 +27,7 @@ d.
 we generate neighboring states by picking random indices in the list and reversing the order of the nodes in  between those two indices, which may limit how optimal the solution can get by generating potentially bad states within the alloted time.
 
 e. 
-since every time the best path and the best cost would be different, we 	would run the program totally 10 times and get the average TSP cost. 	Meanwhile, calculate the standard deviation of the cost.
+since every time the best path and the best cost would be different, we would run the program totally 10 times and get the average TSP cost. Meanwhile, calculate the standard deviation of the cost.
 
 run 1: 
 [8, 12, 10, 11, 15, 19, 18, 22, 23, 21, 29, 28, 26, 20, 25, 27, 24, 16, 17, 14, 13, 9, 7, 3, 4, 5, 1, 2, 6, 8]
