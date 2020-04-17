@@ -109,6 +109,8 @@ class SimulatedAnneal:
         # temp is a function of time passed, so we can use temp as the stopping condition
         while self.temp >= self.stopping_temp:
             time_elapsed = time.time() - self.start_time
+            if time_elapsed > self.max_time:
+                break
             candidate_solution, candidate_cost = self.get_neighboring_state()
             # always take the new state if it provides a lower total cost
             if candidate_cost < self.curr_cost:
